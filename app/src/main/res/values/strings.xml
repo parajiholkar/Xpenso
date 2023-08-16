@@ -6,9 +6,8 @@
     <string name="enter_discription">Enter Discription</string>
     <string name="enter_expense_rs">Enter Expense ( Rs )</string>
     <string name="add_expense">ADD Expense</string>
-    <string name="email_or_phone_number">Email or phone number :</string>
+    <string name="email">Email :</string>
     <string name="password">Password :</string>
     <string name="confirm_password">Confirm Password :</string>
-    <string name="username">Username :</string>
     <string name="analysis">analysis</string>
 </resources>

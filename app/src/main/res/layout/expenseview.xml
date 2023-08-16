@@ -4,11 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginVertical="5dp"
+    android:layout_marginHorizontal="9dp"
+    android:background="@drawable/expense_view_bg">
 
 <!--    text colour is White-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -16,6 +20,7 @@
             android:id="@+id/img"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_marginHorizontal="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -34,15 +39,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
-                android:textSize="17dp"
+                android:textSize="15dp"
                 android:textStyle="bold"
                 android:textColor="@color/white"/>
 
             <TextView
-                android:id="@+id/Discription"
+                android:id="@+id/Date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Discription "
+                android:layout_marginLeft="10dp"
+                android:text="Date"
+                android:textSize="10sp"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
@@ -50,23 +57,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
             <ImageView
                 android:id="@+id/imgrupee"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="24dp"
-                android:background="@drawable/baseline_currency_rupee_24"/>
+                android:layout_width="20dp"
+                android:layout_height="23dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/baseline_currency_rupee_24" />
 
-        <TextView
+            <TextView
             android:id="@+id/Ruppee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="20dp"
             android:text="120"
-            android:textSize="22dp"
+            android:textSize="17dp"
             android:textStyle="bold"
             android:textColor="@color/white"/>
         </LinearLayout>

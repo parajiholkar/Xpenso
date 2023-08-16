@@ -1,16 +1,22 @@
 package com.project1.xpensemanager;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.viewHolder> {
     Context context;
@@ -31,9 +37,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.viewHolder> {
     @Override
     public void onBindViewHolder(@NonNull Adapter.viewHolder holder, int position) {
         holder.expensename.setText(arrayList.get(position).expensename);
-        holder.discription.setText(arrayList.get(position).discription);
         holder.img.setImageResource(arrayList.get(position).img);
         holder.expenseMoney.setText(arrayList.get(position).ExpenseMoney);
+        holder.date.setText(arrayList.get(position).Date);
+
 
     }
 
@@ -43,14 +50,16 @@ public class Adapter extends RecyclerView.Adapter<Adapter.viewHolder> {
     }
 
     public class viewHolder extends RecyclerView.ViewHolder {
-        TextView expensename, discription, expenseMoney;
+        TextView expensename, expenseMoney, date;
+        ConstraintLayout constraintLayout ;
         ImageView img ;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             expensename = itemView.findViewById(R.id.expensename);
-            discription = itemView.findViewById(R.id.Discription);
+            date = itemView.findViewById(R.id.Date);
             img = itemView.findViewById(R.id.img);
             expenseMoney = itemView.findViewById(R.id.Ruppee);
+            constraintLayout = itemView.findViewById(R.id.layout);
         }
     }
 }
